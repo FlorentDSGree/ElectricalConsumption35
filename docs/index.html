@@ -6,20 +6,20 @@ body {
   font-family: Arial;
   font-size: 12pt;
   margin-left: 50px;
-  margin-right: 50px
+  margin-right: 50px;
 }
 /* Header/Logo Title */
 .header1 {
-  padding: 50px; text-align: center; background: linear-gradient(#9a9fad,white); color: #426ff5;font-size: 34px;
+  padding: 50px; text-align: center; background: #2281c7; color: white; font-size: 34px; font-family: Arial;
 }
 .header2 {
-  padding: 15px; text-align: center; background: #426ff5; color: white; font-size: 28px;
+  padding: 15px; text-align: left; background: white; color: #2281c7; font-size: 28px;
 }
 .header3 {
-  padding: 10px; text-align: left; background: white; color: #426ff5; font-size: 22px; margin-left:0px;
+  padding: 10px; text-align: left; background: white; color: #2281c7; font-size: 22px; margin-left:0px;
 }
-.horizlineorange {
-  padding: 0.5px; background: #9a9fad;
+.horizline {
+  padding: 0.5px; background: #2281c7;
 }
 /* Page Content */
 .content {padding:15px;margin: 0.5; text-align: justify; line-height: 1.5}
@@ -33,9 +33,9 @@ body {
 .centered {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #E89321;
+  left: 40%;
+  transform: translate(-65%, -50%);
+  color: white;
   font-size: 60px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -51,25 +51,30 @@ td, th {
   padding: 8px;
 }
 </style>
-<div class="header1"><b>Consommation électrique en Ille-et-Vilaine</b></div>
 
-<div class="header3"><b>Introduction</b></div>
-<div class="horizlineorange"></div>
+<div class="container">
+  <img src="https://florentdsgree.github.io/ElectricalConsumption35/Background.jpg"" alt="Snow" style="width:100%;">
+  <div class="centered"><b>Consommation électrique<br>en Ille-et-Vilaine</b>
+</div>
+</div>
+
+<div class="header2"><b>Introduction</b></div>
+<div class="horizline"></div>
 <div class="content"> L'objectif de ce document est d'analyser quelques aspects de la consommation électrique en Ille-et-Vilaine grâce aux 
 <a href="https://data.enedis.fr/explore/dataset/consommation-electrique-par-secteur-dactivite-commune/table/?refine.nom_departement=Ille-et-Vilaine"> données Enedis</a>.
 Ces données comportent par exemple le nombre de site et la consommation électrique par type de site (résidentiel, industriel...). Les données couvrent
 la période de 2011 à 2017.
 
 </div>
-<div class="header3"><b>Analyse du nombre de site et de la consommation de 2011 à 2017</b></div>
-<div class="horizlineorange"></div>
+<div class="header2"><b>Analyse du nombre de site et de la consommation de 2011 à 2017</b></div>
+<div class="horizline"></div>
 <div class="content">Pour une analyse juste, il faut préparer les données. Le nombre de commune présentant des données complètes varie d'une année à l'autre.
 Uniquement les communes dont les données sont disponibles pour toutes les années seront gardées. Le graphe ci-dessous illustre la quantité de données gardées et ignorées.
 De 7% à 63% des données ne sont pas utilisées pour analyser l'évolution du nombre de sites et de la consommation électrique à cause de données incomplètes pour 
 certaines villes. Sur la globalité des années, seulement 7% des communes ne sont pas utilisées pour l'analyse. Cependant, la ville principale, Rennes, fait partie 
 de ces 7% ce qui explique en partie les forts pourcentages de données ignorées. Les données sur l'agriculture sont les moins impactées car la ville principale 
-possède très peu de sites agricoles. Pour la suite de l'analyse, les données "autres" ne seront pas analysées car la définition "autres" est trop vague et le 
-nombre de sites diminue chaque année peut-être car certains sites sont classés dans une autre catégorie.
+possède très peu de sites agricoles. Pour la suite de l'analyse, les données "autres" ne seront pas analysées car la définition "autres" est trop vague, le 
+nombre de sites diminue chaque année (peut-être car certains sites sont classés dans une autre catégorie) et représent moins de 0.1% du nombre total de site.
 </div>
 <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/ElectricalConsumption35/DataFiltered.html" width="1300" 
 height="550"></object>
